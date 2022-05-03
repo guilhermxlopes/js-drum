@@ -13,32 +13,49 @@
     <title>JS Drum</title>
   </head>
   <body>
-    <div data-key="55" class="key"></div>
-        <kbd>A</kbd>
-    </div>
-    <div data-key="83" class="key"></div>
-        <kbd>S</kbd>
-    </div>
-    <div data-key="68" class="key"></div>
-        <kbd>D</kbd>
-    </div>
-    <div data-key="70" class="key"></div>
-        <kbd>F</kbd>
-    </div>
-    <div data-key="71" class="key"></div>
-        <kbd>G</kbd>
-    </div>
-    <div data-key="72" class="key"></div>
-        <kbd>H</kbd>
-    </div>
-    <div data-key="74" class="key"></div>
-        <kbd>J</kbd>
-    </div>
-    <div data-key="75" class="key"></div>
-        <kbd>K</kbd>
-    </div>
-    <div data-key="76" class="key"></div>
-        <kbd>L</kbd>
+    <div class="container-lg">
+      <div class="row" style="height: 100vh">
+        <div
+          class="col md-5 d-flex justify-content-center align-items-center gap-5"
+        >
+          <div data-key="55" class="key">
+            <kbd>A</kbd>
+            <span class="sound">clap</span>
+          </div>
+          <div data-key="83" class="key">
+            <kbd>S</kbd>
+            <span class="sound">hihat</span>
+          </div>
+          <div data-key="68" class="key">
+            <kbd>D</kbd>
+            <span class="sound">kick</span>
+          </div>
+          <div data-key="70" class="key">
+            <kbd>F</kbd>
+            <span class="sound">openhat</span>
+          </div>
+          <div data-key="71" class="key">
+            <kbd>G</kbd>
+            <span class="sound">boom</span>
+          </div>
+          <div data-key="72" class="key">
+            <kbd>H</kbd>
+            <span class="sound">ride</span>
+          </div>
+          <div data-key="74" class="key">
+            <kbd>J</kbd>
+            <span class="sound">snare</span>
+          </div>
+          <div data-key="75" class="key">
+            <kbd>K</kbd>
+            <span class="sound">tom</span>
+          </div>
+          <div data-key="76" class="key">
+            <kbd>L</kbd>
+            <span class="sound">tink</span>
+          </div>
+        </div>
+      </div>
     </div>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
