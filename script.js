@@ -11,11 +11,10 @@ document.addEventListener("keydown", function (e) {
 });
 
 function removeTransition(e) {
-  if (e.propertyName !== "transform") return; //skip it if it's not a transform
+  console.log(e);
+  if (e.propertyName !== "font-weight") return; //skip it if it's not a transform
   this.classList.remove("playing");
-
-  const keys = document.querySelectorAll(".key");
-  keys.forEach((key) =>
-    key.addEventListener("transitionend", removeTransition)
-  );
 }
+
+const keys = document.querySelectorAll(".key");
+keys.forEach((key) => key.addEventListener("transitionend", removeTransition));
