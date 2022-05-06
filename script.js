@@ -11,10 +11,14 @@ document.addEventListener("keydown", function (e) {
 });
 
 function removeTransition(e) {
-  console.log(e);
   if (e.propertyName !== "font-weight") return; //skip it if it's not a transform
   this.classList.remove("playing");
 }
 
 const keys = document.querySelectorAll(".key");
 keys.forEach((key) => key.addEventListener("transitionend", removeTransition));
+
+const btn = document.getElementById("k");
+btn.addEventListener("click", function () {
+  document.write("Hello, it works!");
+});
