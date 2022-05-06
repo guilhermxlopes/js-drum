@@ -1,6 +1,21 @@
 document.addEventListener("keydown", function (e) {
   const audio = document.querySelector(`audio[data-key="${e.key}"]`);
   const key = document.querySelector(`.key[data-key="${e.key}"]`);
+  console.log(key);
+
+  if (!audio) return; //stop function from running
+
+  audio.currentTime = 0;
+  audio.play();
+
+  key.classList.add("playing");
+});
+
+document.addEventListener("click", function (e) {
+  const audio = document.querySelector(`audio[data-key="${e.key}"]`);
+  const button = document.querySelector(`.btn[id="${e.key}"]`);
+  console.log(e);
+  console.log(button);
 
   if (!audio) return; //stop function from running
 
@@ -17,8 +32,3 @@ function removeTransition(e) {
 
 const keys = document.querySelectorAll(".key");
 keys.forEach((key) => key.addEventListener("transitionend", removeTransition));
-
-const btn = document.getElementById("k");
-btn.addEventListener("click", function () {
-  document.write("Hello, it works!");
-});
